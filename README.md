@@ -1,6 +1,10 @@
 # Github Issue Notes Theme
 
-## [Live demo](https://github-issue-notes-theme.vercel.app)
+This theme will turn your repository issues and into awesome notes.
+
+Also the color of your labels will be used as color for the tags in the site.
+
+## Have a look at this [Live demo](https://github-issue-notes-theme.vercel.app)
 
 ## How to deploy
 
