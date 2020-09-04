@@ -10,6 +10,8 @@ import { getNoteById } from "../helpers/api"
 const NoteTemplate = (props) => {
     const [loading, setLoading] = React.useState(true);
     const [note, setNote] = React.useState({});
+    
+    React.useEffect(() => {
     getNoteById(props.match.params.slug)
         .then(d => {
             setNote(d)
