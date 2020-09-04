@@ -19,7 +19,7 @@ export function getNotesByTag(tag) {
         .catch(error => error)
 }
 
-export function getNotesById(id) {
+export function getNoteById(id) {
     return fetch(`/api/notes?id=${id}`)
         .then(res => res.json())
         .then(data => data)
