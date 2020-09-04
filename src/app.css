@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap');
+
+:root {
+	--primary: #0078d4;
+	--primary-a: #69afe5;
+	--primary-b: #b3d6fc;
+	--secondary: #212121;
+	--secondary-a: #333333;
+	--secondary-b: #000;
+	--text: #fff;
+	--text-a: #ccc;
+	--text-b: #aaa;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+    scroll-behavior: smooth
+}
+
+html,
+body {
+	font-family: 'Fira Sans', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body {
+	background-color: var(--secondary);
+	color: var(--text);
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	/* flex-direction: column; */
+}
+
+.sidenav-wrapper {
+	width: 260px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidenav-wrapper * {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.sidenav-wrapper .meta {
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+.sidenav-wrapper .meta h6 {
+	margin: 0;
+}
+
+.sidenav-wrapper .meta img {
+	border-radius: 100%;
+	width: 50%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.sidenav-wrapper small {
+	display: block;
+	padding: 5px 20px;
+	background: var(--secondary-a);
+}
+
+.sidenav {
+	overflow-y: auto;
+	height: auto;
+}
+.nav-item {
+	display: block;
+	padding: 12px 20px;
+	cursor: pointer;
+	font-size: 14px;
+	color: var(--text);
+}
+
+.nav-item.active {
+	background: var(--primary);
+	color: var(--primary-b);
+	font-weight: 500;
+}
+
+.nav-item.active:hover {
+	background: var(--primary);
+}
+
+.nav-item:hover {
+	background: var(--secondary-b);
+}
+
+/* content */
+
+.content-wrapper {
+	flex: 1;
+	overflow-y: auto;
+	background: var(--secondary);
+}
+
+.content-wrapper header {
+	background: var(--secondary-a);
+	padding: 20px 50px;
+}
+
+.content-wrapper header h1 {
+	margin-bottom: 0;
+}
+
+/* meta */
+
+.content-wrapper .meta {
+	padding: 20px 50px 0px 50px;
+	font-size: 0.8rem;
+}
+
+.content-wrapper .meta .note-date {
+	margin-bottom: 5px;
+}
+
+.content-wrapper .meta .note-tags {
+	text-align: left;
+	line-height: 1.4rem;
+}
+
+.content-wrapper .meta .note-tags a {
+	margin-left: 0px;
+	margin-right: 3px;
+}
+
+/* note content */
+
+.content-wrapper .note-content {
+	padding: 20px 50px;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	color: var(--text-a);
+}
+
+h1 {
+	font-size: 2.4rem;
+	margin: 1rem 0;
+}
+h2 {
+	font-size: 2.2rem;
+	margin: 1rem 0;
+}
+h3 {
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+h4 {
+	font-size: 1.8rem;
+	margin: 1rem 0;
+}
+h5 {
+	font-size: 1.6rem;
+	margin: 1rem 0;
+}
+h6 {
+	font-size: 1.4rem;
+	margin: 1rem 0;
+}
+
+blockquote {
+	border-left: 5px solid var(--primary);
+	padding: 1rem;
+	font-size: 1.5rem;
+	line-height: 140%;
+	margin: 2rem 0;
+	background: var(--secondary-a);
+}
+
+blockquote * {
+	padding: 0;
+	margin: 0;
+    font-weight: bold;
+}
+
+hr {
+	margin: 2rem 0;
+	border: 1px dashed var(--text);
+}
+
+ul,
+ol {
+	margin-left: 1rem;
+	margin-bottom: 10px;
+}
+
+img {
+	max-width: 100%;
+	margin: 1rem 0;
+}
+
+.note-content a {
+	color: var(--primary-b);
+	border-bottom: 3px solid var(--primary-a);
+	padding: 0px 4px;
+	transition: 0.2s ease-in-out;
+}
+
+.note-content a:hover {
+	background: var(--primary);
+}
+
+/* notes listing styles */
+
+.note {
+	background: var(--secondary-a);
+	padding: 10px 50px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	color: var(--text);
+	font-size: 1rem;
+}
+
+.note-date {
+	color: var(--text-a);
+}
+
+.note-title {
+	color: var(--text);
+	display: block;
+	margin: 5px 0px;
+}
+
+.note-tags {
+	text-align: right;
+	line-height: 1.4rem;
+}
+
+.note-tags a {
+	color: var(--secondary-b);
+	background: var(--text-b);
+	font-size: 0.8rem;
+	padding: 1px 8px;
+	border-radius: 2rem;
+	margin-left: 3px;
+}
+
+.note:hover {
+	background: var(--secondary-b);
+}
+
+/* scrollbar */
+
+/* width */
+* ::-webkit-scrollbar {
+	width: 8px;
+	margin: 0px 5px;
+}
+
+/* Track */
+* ::-webkit-scrollbar-track {
+	background: var(--secondary-a);
+}
+
+/* Handle */
+* ::-webkit-scrollbar-thumb {
+	background: var(--text-a);
+}
+
+/* Handle on hover */
+* ::-webkit-scrollbar-thumb:hover {
+	background: var(--text-b);
+}
+
+/* table */
+
+table {
+	width: 100%;
+	margin: 2rem 0;
+	border-collapse: collapse;
+}
+
+table th {
+	background-color: var(--text-b);
+	color: var(--secondary);
+}
+table td,
+table th,
+table tr {
+	border: 1px solid var(--text-b);
+	padding: 0.2rem;
+}
+
+/* syntax */
+
+pre {
+	margin: 2rem 0;
+	overflow-x: auto;
+	background: var(--secondary-a) !important;
+	padding: 12px 13px;
+}
+
+code {
+	margin: 0 2px;
+	padding: 3px 5px;
+	color: var(--primary-a);
+	border-radius: 2px;
+	white-space: pre;
+	background-color: var(--secondary-a);
+	font-family: monospace;
+}
+
+p {
+	margin: 1rem 0;
+}
+
+/* sidenav toggle classes */
+
+#toggler {
+	cursor: pointer;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	z-index: 100 !important;
+	visibility: hidden;
+}
+
+.sidenav-wrapper {
+	transition: 0.3s ease-in-out;
+	z-index: 0 !important;
+}
+
+@media screen and (max-width: 850px) {
+	.sidenav-wrapper {
+		width: 200px;
+	}
+	.nav-item{
+		font-size: 0.8rem;
+	}
+	main {
+		margin-left: -200px;
+		transition: 0.3s ease-in-out;
+	}
+	html {
+		overflow-x: hidden;
+	}
+	.show {
+		margin-left: 0px;
+	}
+	.slide {
+		transform: translateX(200px);
+	}
+	#toggler {
+		visibility: visible;
+	}
+}
