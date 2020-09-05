@@ -4,7 +4,6 @@ import Markdown from 'react-markdown'
 import { Link } from 'react-router-dom'
 import Toggler from '../components/Toggler'
 import Loader from '../components/Loader'
-import { GITHUB_USERNAME, REPOSITORY } from '../theme.config'
 import { getNoteById } from "../helpers/api"
 
 const NoteTemplate = (props) => {
