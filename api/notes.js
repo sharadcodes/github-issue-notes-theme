@@ -26,6 +26,6 @@ module.exports = (req, res) => {
     	fetch(API_ENDPOINT, OPTIONS)
 	    .then(response => response.json())
 	    .then(data => res.send(data))
-	    .catch(error => error
+	    .catch(error => error);
     }
 };
